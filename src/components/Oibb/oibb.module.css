@@ -9,13 +9,16 @@
 }
 
 .oibb_container img{
-    width: 300px;
-    object-fit: contain;
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
 }
 
 .frase_chaveco {
     font-weight: bold;
     font-size: 20px;
+    width: 300px;
+    height: 100px;
 }
 
 .oibb_container button {

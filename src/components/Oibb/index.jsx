@@ -2,10 +2,11 @@
 
 import React, { useEffect, useState } from 'react'
 import styles from './oibb.module.css'
+import Image from 'next/image'
 
 const CHAVECO = [
   "Se a terra é redonda... Por que não rola algo entre nós?",
-  "Você caiu do céu bb? sua cara ta toda quebrada bb",
+  "Você caiu do céu bb? sua cara ta toda quebrada, vida",
   "Você trabalha na obra?! e esse reboco ai no teu rosto bb",
   "Não sou uma camera, mas meu foco é vose bb",
   "Tenho um xampu pra tirar teu ex da tua cabeça! euserve bb",
@@ -13,12 +14,12 @@ const CHAVECO = [
   "Vose é piolho?! pq tu nau sai da minha cabessa",
   "Gata você com essi pandeiro e eu com meu berimbau é capoeira a noite intera"
 ]
-export default function Oibb({start, controller}) {
+export default function Oibb({start, controller, bg_image}) {
   const [chaveco, setChaveco] = useState(CHAVECO[0]);
 
   useEffect(() => {
-    let interval = setTimeout(() => {
     let i = Math.floor(Math.random() * CHAVECO.length);
+    let interval = setTimeout(() => {
       setChaveco(CHAVECO[i])
     }, [5000]);
 
@@ -29,9 +30,9 @@ export default function Oibb({start, controller}) {
   
   return (
     <article className={styles.oibb_container}>
-      <span className={styles.frase_chaveco}>{ chaveco }</span>
-      <img className={styles.oi_bb_image} src="https://i.imgur.com/tbPTuLu.png" alt="oi bb mim dá uma chanci" />
-      {!controller && <button onClick={start} className={styles.play_btn}>Aperta aqui BB</button>}
+      {!controller ? <span className={styles.frase_chaveco}>{chaveco}</span> : <h1>EU & VOCê, ROLA?</h1>}
+      <Image className={styles.oi_bb_image} src={bg_image} placeholder='blur'/>
+      {!controller && <button onClick={start} className={styles.play_btn}>Aperta aqui BB</button>} 
     </article>
   )
 }

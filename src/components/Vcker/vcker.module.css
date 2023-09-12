@@ -1,6 +1,7 @@
 .btns_container button{
     padding: 10px 2rem;
     white-space: nowrap;
+    transition: all 300ms ease-in-out;
 }
 
 .btns_container {
