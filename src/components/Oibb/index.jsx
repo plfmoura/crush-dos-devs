@@ -30,7 +30,7 @@ export default function Oibb({start, controller, bg_image}) {
   
   return (
     <article className={styles.oibb_container}>
-      {!controller ? <span className={styles.frase_chaveco}>{chaveco}</span> : <h1>EU & VOCê, ROLA?</h1>}
+      {!controller ? <span className={styles.frase_chaveco}>{chaveco}</span> : <h1>EU & VOCê, tomar um AÇAÍ?</h1>}
       <Image className={styles.oi_bb_image} src={bg_image} placeholder='blur'/>
       {!controller && <button onClick={start} className={styles.play_btn}>Aperta aqui BB</button>} 
     </article>

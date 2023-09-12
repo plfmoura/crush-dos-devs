@@ -29,21 +29,17 @@ export default function Elaker() {
                     :
                     <>
                         <h1>Aí sim bb</h1>
-                        <h2>Preencha seus dados, que vou te chamar no ZAP</h2>
+                        <h2>Preencha seus dados, né vida!</h2>
                         <form onSubmit={(e) => handleSubmit(e)}>
                             <div style={{ display: "flex", flexDirection: 'column', justifyContent: 'space-evenly' }}>
                                 <label htmlFor="">Bota seu Nome aqui BB</label>
-                                <input type="text" />
+                                <input type="text" placeholder='AMOR DA MINHA VIDA'/>
                             </div>
                             <div style={{ display: "flex", flexDirection: 'column', justifyContent: 'space-evenly' }}>
-                                <label htmlFor="">Qual tua idade? sua linda</label>
-                                <input type="text" />
+                                <label htmlFor="">ZAP pra confirmação desse evento</label>
+                                <input type="text" placeholder='(21)9SEUNUMERO-VIDA'/>
                             </div>
-                            <div style={{ display: "flex", flexDirection: 'column', justifyContent: 'space-evenly' }}>
-                                <label htmlFor="">Deixa seu Zap que já te xamo</label>
-                                <input type="text" />
-                            </div>
-                            <button type="submit">Enviar para o Crush</button>
+                            <button type="submit">Enviar para Pedro</button>
                         </form>
                     </>
             }
